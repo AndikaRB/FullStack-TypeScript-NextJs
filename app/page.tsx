@@ -7,7 +7,7 @@ async function getPosts() {
   }
   return res.json();
 }
-// test
+
 export default async function Home() {
   const data: { id: number; title: string }[] = await getPosts();
   console.log(data);
