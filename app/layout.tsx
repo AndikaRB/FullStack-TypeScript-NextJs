@@ -40,12 +40,14 @@ export default function RootLayout({
         top={"0"}
         display={"flex"}
         alignItems={"center"}
+        // mx={"auto"}
       >
         <HStack
           width={"96%"}
           // h={"114px"}
           display={"flex"}
           justifyContent={"center"}
+          mx={"auto"}
         >
           <Box
             w={"1200px"}
@@ -132,37 +134,43 @@ export default function RootLayout({
                 </Button>
               </Box>
               <Box h={"24px"} w={"1px"} bgColor={"#ffffff"}></Box>
-              <Button
-                w={"87px"}
-                h={"32px"}
-                border={"2px solid #ffffff"}
-                borderRadius={"8px"}
-                color={"#ffffff"}
-                fontSize={"14px"}
-                lineHeight={"18px"}
-                // fontFamily={"Effra, Helvetica, Arial, sans-serif"}
-                fontWeight={500}
-              >
-                Login
-              </Button>
-              <Button
-                w={"87px"}
-                h={"32px"}
-                // border={"2px solid #ffffff"}
-                bgColor={"#ffffff"}
-                borderRadius={"8px"}
-                color={"#0095DA"}
-                fontSize={"14px"}
-                lineHeight={"18px"}
-                // fontFamily={"Open Sauce One,Nunito Sans, sans-serif"}
-                fontWeight={500}
-              >
-                Register
-              </Button>
+              <Link href={"/login"}>
+                {" "}
+                <Button
+                  w={"87px"}
+                  h={"32px"}
+                  border={"2px solid #ffffff"}
+                  borderRadius={"8px"}
+                  color={"#ffffff"}
+                  fontSize={"14px"}
+                  lineHeight={"18px"}
+                  // fontFamily={"Effra, Helvetica, Arial, sans-serif"}
+                  fontWeight={500}
+                >
+                  Login
+                </Button>
+              </Link>
+              <Link href={"/register"}>
+                <Button
+                  w={"87px"}
+                  h={"32px"}
+                  // border={"2px solid #ffffff"}
+                  bgColor={"#ffffff"}
+                  borderRadius={"8px"}
+                  color={"#0095DA"}
+                  fontSize={"14px"}
+                  lineHeight={"18px"}
+                  // fontFamily={"Open Sauce One,Nunito Sans, sans-serif"}
+                  fontWeight={500}
+                >
+                  Register
+                </Button>
+              </Link>
             </Box>
           </Box>
         </HStack>
       </Box>
+      {children}
     </>
   );
 }
